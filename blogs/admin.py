@@ -5,9 +5,9 @@ class BlogAdmin(admin.ModelAdmin):
     prepopulated_fields = {
         'slug':('title' ,)
         }
-    list_display = ('author','title', 'category', 'created_at', )
+    list_display = ('author','title', 'category', 'created_at', 'is_featured')
     list_filter = ('category', 'author')
-    list_editable = ('title', )
+    list_editable = ('title', 'is_featured' )
     
 
 admin.site.register(Category)
